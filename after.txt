@@ -1,0 +1,16 @@
+sudo nvim /etc/cron.weekly/fstrim
+
+#!/bin/bash
+fstrim -A
+
+sudo chmod u+x /etc/cron.weekly/fstrim
+
+
+.Xresources
+Xft.dpi:120
+
+.xinitrc
+xrdb ~/.Xresources
+picom &
+pipewire &
+exec dbus-run-session i3
