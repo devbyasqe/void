@@ -6,7 +6,7 @@ sudo xbps-install -Sy void-repo-nonfree
 
 sudo xbps-install -Syu
 
-sudo xbps-install -Sy xorg xinit cronie dbus elogind NetworkManager vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau nvidia bluez pipewire wireplumber libspa-bluetooth libjack-pipewire alsa-pipewire picom i3 alacritty chromium polybar feh 
+sudo xbps-install -Sy xorg xinit cronie dbus elogind NetworkManager vulkan-loader mesa-vulkan-radeon mesa-vaapi mesa-vdpau nvidia bluez pipewire wireplumber libspa-bluetooth libjack-pipewire alsa-pipewire picom i3 alacritty chromium polybar feh lf nvim rofi
 
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
