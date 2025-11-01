@@ -1,3 +1,6 @@
+chmod +x install.sh
+
+
 sudo nvim /etc/cron.weekly/fstrim
 
 #!/bin/bash
