@@ -11,7 +11,6 @@ sudo xbps-install -Sy xorg xinit cronie dbus elogind NetworkManager vulkan-loade
 sudo ln -s /etc/sv/dbus /var/service
 sudo ln -s /etc/sv/elogind /var/service
 sudo ln -s /etc/sv/cronie /var/service
-sudo ln -s /etc/sv/NetworkManager /var/service
 sudo ln -s /etc/sv/bluetoothd /var/service
 
 sudo mkdir -p ~/.config/pipewire/pipewire.conf.d
@@ -25,4 +24,6 @@ sudo ln -s /usr/share/alsa/alsa.conf.d/99-pipewire-default.conf /etc/alsa/conf.d
 echo "/usr/lib/pipewire-0.3/jack" | sudo tee /etc/ld.so.conf.d/pipewire-jack.conf
 sudo ldconfig
 
+sudo sv down wpa_supplicant
 sudo rm /var/service/wpa_supplicant
+sudo ln -s /etc/sv/NetworkManager /var/service
